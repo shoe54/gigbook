@@ -1,4 +1,4 @@
-package GigBook::Controller::Venue;
+package GigBook::Controller::Band;
 use Moose;
 use namespace::autoclean;
 
@@ -6,7 +6,7 @@ BEGIN { extends 'Catalyst::Controller'; }
 
 =head1 NAME
 
-GigBook::Controller::Venue - Catalyst Controller
+GigBook::Controller::Band - Catalyst Controller
 
 =head1 DESCRIPTION
 
@@ -16,15 +16,17 @@ Catalyst Controller.
 
 =cut
 
+
 =head2 index
 
 =cut
 
-sub index : Path : Args(0) {
+sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
-    $c->response->body('Matched GigBook::Controller::Venue in Venue.');
+    $c->response->body('Matched GigBook::Controller::Band in Band.');
 }
+
 
 =head1 AUTHOR
 
