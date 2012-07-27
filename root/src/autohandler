@@ -26,14 +26,16 @@
                     <ul class="nav">
 %                   foreach my $nav_item (qw/band venue public/) {
 %                      my $state = '';
-%                      $state = 'class="active"' if $nav_item eq $active;
-                        <li <%$state%>><a href="<% 
+%                      $state = 'class="active"' if $nav_item and $nav_item eq $active;
+                        <li <%$state%>><a href="<%
                             $c->uri_for('/'.$nav_item)
                             %>"><% ucfirst $nav_item %></a></li>
 
 %                   }
+                            <li class="divider-vertical"></li>
+                        <li><a href="">Sign Up</a></li>
+                        <li><a href="">Login</a></li>
 
-                        <li><a href="#">Public</a></li>
                     </ul>
                 </div>
             </div>
