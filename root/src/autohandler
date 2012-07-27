@@ -13,7 +13,7 @@
         $c->uri_for('/static/scripts/jquery.min.js')
         %>"></script>
 
-    <title>GigBook</title>
+    <title>gigsandmore</title>
 
 </head>
 <body>
@@ -22,7 +22,7 @@
             <div class="navbar-inner">
                 <div class="container">
                     <a class="brand" href="<% $c->uri_for('/') %>">
-                        GigBook
+                        gigsandmore
                     </a>
                     <ul class="nav">
 %                   foreach my $nav_item (qw/band venue public/) {
