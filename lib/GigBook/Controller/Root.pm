@@ -57,7 +57,7 @@ sub info :Path {
 
 =head2 auto
 
-Summarry of auto
+Summary of auto
 
 =cut
 

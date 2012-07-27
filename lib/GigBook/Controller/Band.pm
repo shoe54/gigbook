@@ -27,6 +27,17 @@ sub index :Path :Args(0) {
 #    $c->response->body('Matched GigBook::Controller::Band in Band.');
 }
 
+=head2 auto
+
+Summary of auto
+
+=cut
+
+sub auto :Private {
+    my ($self, $c) = @_;
+    $c->stash(active => 'band');
+}
+
 
 =head1 AUTHOR
 

@@ -26,6 +26,17 @@ sub index : Path : Args(0) {
 #    $c->response->body('Matched GigBook::Controller::Venue in Venue.');
 }
 
+=head2 auto
+
+Summarry of auto
+
+=cut
+
+sub auto :Private {
+    my ($self, $c) = @_;
+    $c->stash(active => 'venue')
+}
+
 =head1 AUTHOR
 
 William Travis Holton
