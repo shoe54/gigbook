@@ -1,31 +1,14 @@
 package GigBook::View::HTML;
-  use Moose;
-  extends 'Catalyst::View::HTML::Mason';
+use Moose;
+extends 'Catalyst::View::HTML::Mason';
 
-  ## uncomment below to pass default configuration options to this view
-  # __PACKAGE__->config( );
+use GigBook;
 
-  =head1 NAME
+__PACKAGE__->config( use_match => 0 );
+__PACKAGE__->config(
+    template_extension => '.html',
+    interp_args        => { comp_root => GigBook->path_to(qw/root src/) },
+    globals            => [qw/$c/]
+);
 
-  GigBook::View::HTML - Mason View Component for GigBook
-
-  =head1 DESCRIPTION
-
-  Mason View Component for GigBook
-
-  =head1 SEE ALSO
-
-  L<GigBook>, L<Catalyst::View::HTML::Mason>, L<HTML::Mason>
-
-  =head1 AUTHOR
-
-  William Travis Holton
-
-  =head1 LICENSE
-
-  This library is free software . You can redistribute it and/or modify
-  it under the same terms as perl itself.
-
-  =cut
-
-  1;
+1;
