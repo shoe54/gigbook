@@ -21,7 +21,7 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
-                    <a class="brand">
+                    <a class="brand" href="<% $c->uri_for('/') %>">
                         GigBook
                     </a>
                     <ul class="nav">
