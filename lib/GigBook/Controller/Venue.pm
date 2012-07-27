@@ -23,7 +23,7 @@ Catalyst Controller.
 sub index : Path : Args(0) {
     my ( $self, $c ) = @_;
 
-    $c->response->body('Matched GigBook::Controller::Venue in Venue.');
+#    $c->response->body('Matched GigBook::Controller::Venue in Venue.');
 }
 
 =head1 AUTHOR

@@ -45,6 +45,16 @@ sub default :Path {
     $c->response->status(404);
 }
 
+=head2 info
+
+Summary of info
+
+=cut
+
+sub info :Path {
+    my ($self, $c) = @_;
+}
+
 =head2 auto
 
 Summarry of auto
