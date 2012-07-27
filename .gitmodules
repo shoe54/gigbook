@@ -1,0 +1,3 @@
+[submodule "root/static/springboard"]
+	path = root/static/springboard
+	url = git@github.com:heytrav/springboard.git
