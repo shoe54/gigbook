@@ -45,6 +45,17 @@ sub default :Path {
     $c->response->status(404);
 }
 
+=head2 auto
+
+Summarry of auto
+
+=cut
+
+sub auto :Private {
+    my ($self, $c) = @_;
+    $c->stash(c => $c);
+}
+
 =head2 end
 
 Attempt to render a view, if needed.
