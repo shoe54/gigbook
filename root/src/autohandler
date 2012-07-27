@@ -34,7 +34,7 @@
 
 %                   }
                             <li class="divider-vertical"></li>
-                        <li><a href="">Sign Up</a></li>
+                        <li><a href="<% $c->uri_for('/signup') %>">Sign Up</a></li>
                         <li><a href="">Login</a></li>
 
                     </ul>
