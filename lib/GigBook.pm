@@ -17,15 +17,15 @@ use Catalyst::Runtime 5.80;
 #                 directory
 
 use Catalyst qw/
-    -Debug
-    ConfigLoader
-    Static::Simple
-/;
+  -Debug
+  ConfigLoader
+  Static::Simple
+  /;
 
 extends 'Catalyst';
 
 ## no critic
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 eval $VERSION;
 ## use critic
 
@@ -40,14 +40,16 @@ eval $VERSION;
 
 __PACKAGE__->config(
     name => 'GigBook',
+
     # Disable deprecated behavior needed by old applications
     disable_component_resolution_regex_fallback => 1,
-    enable_catalyst_header => 1, # Send X-Catalyst header
+    enable_catalyst_header                      => 1,   # Send X-Catalyst header
 );
+
+__PACKAGE__->config( static => { dirs => [ 'static', ], } );
 
 # Start the application
 __PACKAGE__->setup();
-
 
 =head1 NAME
 
