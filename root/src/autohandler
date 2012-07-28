@@ -46,7 +46,7 @@
                         gigsandmore
                     </a>
                     <ul class="nav">
-%                   foreach my $nav_item (qw/band venue public/) {
+%                   foreach my $nav_item (qw/bands venues public/) {
 %                      my $state = '';
 %                      $state = 'class="active"' if $nav_item and $nav_item eq $active;
                         <li <%$state%>><a href="<%

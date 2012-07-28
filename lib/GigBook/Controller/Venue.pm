@@ -26,6 +26,18 @@ sub index : Path : Args(0) {
 #    $c->response->body('Matched GigBook::Controller::Venue in Venue.');
 }
 
+
+=head2 venues
+
+Summarry of venues
+
+=cut
+
+sub venues :Path('/venues') {
+    my ($self, $c) = @_;
+    $c->res->redirect($c->uri_for('/venue'))
+}
+
 =head2 auto
 
 Summarry of auto

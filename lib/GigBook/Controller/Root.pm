@@ -63,7 +63,10 @@ Summary of auto
 
 sub auto :Private {
     my ($self, $c) = @_;
-    $c->stash(c => $c);
+    my $corporate = $c->req->params()->{corporate};
+    $c->log->debug("Got corporate parameter: ".$corporate) if $corporate;
+
+    $c->stash(c => $c, corporate => $corporate);
 }
 
 =head2 end

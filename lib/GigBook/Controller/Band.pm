@@ -39,6 +39,18 @@ sub auto :Private {
 }
 
 
+=head2 bands
+
+Summarry of bands
+
+=cut
+
+sub bands :Path('/bands') {
+    my ($self, $c) = @_;
+    $c->res->redirect($c->uri_for('/band'));
+}
+
+
 =head1 AUTHOR
 
 William Travis Holton

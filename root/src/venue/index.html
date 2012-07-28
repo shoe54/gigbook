@@ -1,2 +1,13 @@
-<h1>Venues</h1>
-Find a venue
+<%args>
+    $corporate => undef
+</%args>
+<div class="row">
+    <h1>Venues</h1>
+    This is visible to all users
+% if ($corporate) {
+    <p>This is visible to corporate users</p>
+% }
+</div>
+
+
+
