@@ -1,15 +1,37 @@
 
-    <div class="span12">
-    <h1>Genre</h1>
-    <p>Music for all tastes</p>
+    <div class="row">
+        <div class="span12">
+
+            <form class="well form-inline form-search">
+                <label>Band name</label>
+                <input type="text" name="genre" id="find_by_band" value=""
+                class="input-medium search-query" />
+                <label>Genre</label>
+                <input type="text" name="genre" id="find_by_genre" value=""
+                class="input-medium search-query" />
+                <label>Region</label>
+                <input type="text" name="genre" id="find_by_area" value=""
+                class="input-medium search-query" />
+                <button type="submit" class="btn btn-info">Find a band</button>
+
+            </form>
+            
+        </div>
         
+    </div>
+    <div class="row">
+        <div class="span12">
+        <h1>Genre</h1>
+        <p>Music for all tastes</p>
+            
+        </div>
     </div>
             <div class="row">
                 <div class="span4">
                     <h2>Alternative</h2>
                         <p>Pearl Jam, Soundgarden, ...</p>
         
-                        <p><a class="btn btn-info" href="<%
+                        <p><a class="btn" href="<%
                             $c->uri_for('/gigfind',undef,undef,$c->req->params) 
                             %>">Find a band &raquo;</a></p>
                         
@@ -18,7 +40,7 @@
                     <h2>Big Band</h2>
                         <p>Pearl Jam, Soundgarden, ...</p>
         
-                        <p><a class="btn btn-info" href="<%
+                        <p><a class="btn" href="<%
                             $c->uri_for('/gigfind',undef,undef,$c->req->params) 
                             %>">Find a band &raquo;</a></p>
                 </div>
@@ -26,7 +48,7 @@
                     <h2>Blues</h2>
                         <p>Pearl Jam, Soundgarden, ...</p>
         
-                        <p><a class="btn btn-info" href="<%
+                        <p><a class="btn" href="<%
                             $c->uri_for('/gigfind',undef,undef,$c->req->params) 
                             %>">Find a band &raquo;</a></p>
                         
@@ -37,7 +59,7 @@
                     <h2>Classical</h2>
                         <p>Pearl Jam, Soundgarden, ...</p>
         
-                        <p><a class="btn btn-info" href="<%
+                        <p><a class="btn" href="<%
                             $c->uri_for('/gigfind',undef,undef,$c->req->params) 
                             %>">Find a band &raquo;</a></p>
                         
@@ -46,7 +68,7 @@
                     <h2>Country</h2>
                         <p>Pearl Jam, Soundgarden, ...</p>
         
-                        <p><a class="btn btn-info" href="<%
+                        <p><a class="btn" href="<%
                             $c->uri_for('/gigfind',undef,undef,$c->req->params) 
                             %>">Find a band &raquo;</a></p>
                         
@@ -55,7 +77,7 @@
                     <h2>Disco</h2>
                         <p>Pearl Jam, Soundgarden, ...</p>
         
-                        <p><a class="btn btn-info" href="<%
+                        <p><a class="btn" href="<%
                             $c->uri_for('/gigfind',undef,undef,$c->req->params) 
                             %>">Find a band &raquo;</a></p>
                         
@@ -66,7 +88,7 @@
                     <h2>Jazz</h2>
                         <p>Pearl Jam, Soundgarden, ...</p>
         
-                        <p><a class="btn btn-info" href="<%
+                        <p><a class="btn" href="<%
                             $c->uri_for('/gigfind',undef,undef,$c->req->params) 
                             %>">Find a band &raquo;</a></p>
                         
@@ -76,7 +98,7 @@
                         
                         <p>Pearl Jam, Soundgarden, ...</p>
         
-                        <p><a class="btn btn-info" href="<%
+                        <p><a class="btn" href="<%
                             $c->uri_for('/gigfind',undef,undef,$c->req->params) 
                             %>">Find a band &raquo;</a></p>
                 </div>
@@ -84,7 +106,7 @@
                     <h2>Reggae</h2>
                         <p>Pearl Jam, Soundgarden, ...</p>
         
-                        <p><a class="btn btn-info" href="<%
+                        <p><a class="btn" href="<%
                             $c->uri_for('/gigfind',undef,undef,$c->req->params) 
                             %>">Find a band &raquo;</a></p>
                         
