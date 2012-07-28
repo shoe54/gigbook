@@ -1,28 +1,31 @@
 
-        <div class="row">
-            <div class="span8 offset2">
-                <ul class="nav nav-tabs">
+    
+<div class="container-fluid">
+    
+        <div class="row-fluid">
+            <div class="span2">
+                <ul class="nav nav-pills nav-stacked">
                     <li><a href="">Venue1</a></li>
                     <li><a href="">Venue2</a></li>
                     <li><a href="">Venue3</a></li>
                     <li><a href="">Venue4</a></li>
-                  <li class="dropdown">
+                    <li class="dropdown">
                     <a class="dropdown-toggle"
-                       data-toggle="dropdown"
-                       href="#">
+                        data-toggle="dropdown"
+                        href="#">
                         Dropdown
                         <b class="caret"></b>
-                      </a>
+                        </a>
                     <ul class="dropdown-menu">
-                      <!-- links -->
+                        <!-- links -->
                     </ul>
-                  </li>
+                    </li>
                 </ul>
             </div>
+
+            <div class="span10">
+                <% $m->call_next %>
+            </div>
         </div>
-    
-<div class="container-fluid">
-    
-        <% $m->call_next %>
     
 </div>
