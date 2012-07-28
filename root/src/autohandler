@@ -83,13 +83,11 @@
                         gigsandmore
                     </a>
                     <ul class="nav">
-%                   foreach my $nav_item (qw/gigbook gigfind gigrate giggrab downloadmusic/) {
-%                      my $state = '';
-%                      $state = 'class="active"' if $nav_item and $nav_item eq $active;
-                        <li <%$state%>><a href="<%
-                            $c->uri_for('/'.$nav_item,undef,undef,$c->req->params )
-                            %>" id="<%$nav_item%>"><% ucfirst $nav_item %></a></li>
-%                   }
+                    <li><a href="<% $c->uri_for('/gigbook') %>">gigbook</a></li>
+                    <li><a href="<% $c->uri_for('/gigfind') %>">gigfind</a></li>
+                    <li><a href="<% $c->uri_for('/gigrate') %>">gigrate</a></li>
+                    <li><a href="<% $c->uri_for('/giggrab') %>" id="giggrab">giggrab</a></li>
+                    <li><a href="<% $c->uri_for('/download') %>">download music</a></li>
                     </ul>
                             <!--<li class="divider-vertical"></li>-->
                 </div>

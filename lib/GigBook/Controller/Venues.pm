@@ -20,7 +20,7 @@ Catalyst Controller.
 
 =cut
 
-sub index   : Args(0) {
+sub index :Path('/gigfind')  : Args(0) {
     my ( $self, $c ) = @_;
 
 #    $c->response->body('Matched GigBook::Controller::Venue in Venue.');

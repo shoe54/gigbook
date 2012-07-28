@@ -21,7 +21,7 @@ Catalyst Controller.
 
 =cut
 
-sub index :Args(0) {
+sub index :Path('/gigbook') :Args(0) {
     my ( $self, $c ) = @_;
 
 #    $c->response->body('Matched GigBook::Controller::Band in Band.');
