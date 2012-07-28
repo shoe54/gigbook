@@ -1,9 +1,0 @@
-    <script type="text/javascript" charset="utf-8" src="<%
-        $c->uri_for('/static/springboard/css-meta/bootstrap/js/bootstrap-carousel.js') 
-        %>"> 
-    </script>
-    <script type="text/javascript" src="<%
-        $c->uri_for('/static/scripts/band.js')
-        %>"></script>
-
-<% $m->call_next %>

@@ -1,0 +1,25 @@
+
+        <div class="row">
+            <div class="span8 offset2">
+                <ul class="nav nav-pills">
+                    <li><a href="">Venue1</a></li>
+                    <li><a href="">Venue2</a></li>
+                    <li><a href="">Venue3</a></li>
+                    <li><a href="">Venue4</a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        Dropdown
+                        <b class="caret"></b>
+                      </a>
+                    <ul class="dropdown-menu">
+                      <!-- links -->
+                    </ul>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    
+
+<% $m->call_next %>

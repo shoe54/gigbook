@@ -1,4 +1,4 @@
-package GigBook::Controller::Band;
+package GigBook::Controller::Bands;
 use Moose;
 use namespace::autoclean;
 
@@ -21,7 +21,7 @@ Catalyst Controller.
 
 =cut
 
-sub index :Path('/bands') :Args(0) {
+sub index :Args(0) {
     my ( $self, $c ) = @_;
 
 #    $c->response->body('Matched GigBook::Controller::Band in Band.');
