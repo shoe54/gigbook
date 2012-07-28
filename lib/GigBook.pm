@@ -25,7 +25,7 @@ use Catalyst qw/
 extends 'Catalyst';
 
 ## no critic
-our $VERSION = '0.01001';
+our $VERSION = '0.02';
 eval $VERSION;
 ## use critic
 
