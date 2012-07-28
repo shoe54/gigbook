@@ -14,7 +14,7 @@
         %>"> 
     </script>
     <script type="text/javascript" src="<%
-        $c->uri_for('/static/scripts/jquery.min.js')
+        $c->uri_for('/static/scripts/jquery.js')
         %>"></script>
 
     <title>gigsandmore</title>
