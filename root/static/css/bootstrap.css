@@ -4871,3 +4871,11 @@ footer.footer {
 .invisible {
   visibility: hidden;
 }
+.bandphoto {
+/* This adds the border */
+padding:4px;
+border:solid;
+border-color: black;
+border-width: 1px 1px 1px 1px;
+background-color:white;	
+}
