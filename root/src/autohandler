@@ -80,7 +80,7 @@
                 <div class="container">
                     <a class="brand" href="<%
                     $c->uri_for('/',undef,undef,$c->req->params) %>">
-                        gigsandmore
+                        <img src="<% $c->uri_for('/static/images/logo_abbrev.png') %>" style="width:45px" />
                     </a>
                     <ul class="nav">
                     <li><a href="<% $c->uri_for('/gigbook') %>">gigbook</a></li>
