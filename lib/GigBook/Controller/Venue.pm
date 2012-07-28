@@ -20,7 +20,7 @@ Catalyst Controller.
 
 =cut
 
-sub index : Path : Args(0) {
+sub index : Path('/venues') : Args(0) {
     my ( $self, $c ) = @_;
 
 #    $c->response->body('Matched GigBook::Controller::Venue in Venue.');
@@ -33,18 +33,18 @@ Summarry of venues
 
 =cut
 
-sub venues :Path('/venues') {
-    my ($self, $c) = @_;
-    my $params = $c->req->params();
-    my ( $corporate, $artist ) = @{$params}{qw/corporate artist/};
-    my $get_string;
-    if ( %{$params} ) {
-        $get_string = '?';
-        $get_string .= 'corporate=' . $corporate if $corporate;
-        $get_string .= '&artist=' . $artist       if $artist;
-    }
-    $c->res->redirect($c->uri_for('/venue').$get_string);
-}
+#sub venues :Path('/venues') {
+    #my ($self, $c) = @_;
+    #my $params = $c->req->params();
+    #my ( $corporate, $artist ) = @{$params}{qw/corporate artist/};
+    #my $get_string;
+    #if ( %{$params} ) {
+        #$get_string = '?';
+        #$get_string .= 'corporate=' . $corporate if $corporate;
+        #$get_string .= '&artist=' . $artist       if $artist;
+    #}
+    #$c->res->redirect($c->uri_for('/venue').$get_string);
+#}
 
 =head2 auto
 

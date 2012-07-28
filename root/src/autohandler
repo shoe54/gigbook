@@ -73,6 +73,9 @@
         </div>
 
         <% $m->call_next %>
+       <div class="row">
+       <div class="span4 offset4"><p>gigsandmore.com-v<% $c->VERSION %></div>
+       </p></div>
     </div>
 </body>
 </html>

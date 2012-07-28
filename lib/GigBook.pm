@@ -24,7 +24,10 @@ use Catalyst qw/
 
 extends 'Catalyst';
 
-our $VERSION = '0.01';
+## no critic
+our $VERSION = '0.01001';
+eval $VERSION;
+## use critic
 
 # Configure the application.
 #
