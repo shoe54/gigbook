@@ -1,4 +1,4 @@
-package GigBook::Controller::Venue;
+package GigBook::Controller::Venues;
 use Moose;
 use namespace::autoclean;
 
@@ -20,7 +20,7 @@ Catalyst Controller.
 
 =cut
 
-sub index : Path('/venues') : Args(0) {
+sub index   : Args(0) {
     my ( $self, $c ) = @_;
 
 #    $c->response->body('Matched GigBook::Controller::Venue in Venue.');
