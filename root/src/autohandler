@@ -1,6 +1,8 @@
 <%args>
     $active => undef
     $get_string => ''
+    $corporate => undef
+    $artist => undef
 </%args>
 <!DOCTYPE HTML>
 <html>
@@ -61,9 +63,10 @@
 
 %                   }
                             <li class="divider-vertical"></li>
+%                   if ($corporate != 1 && $artist != 1) {
                         <li><a href="<% $c->uri_for('/signup') %>">Sign Up</a></li>
                         <li><a href="" id="login">Login</a></li>
-
+%                   }
                     </ul>
                 </div>
             </div>
