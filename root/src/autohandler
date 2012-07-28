@@ -33,6 +33,7 @@
     <script type="text/javascript" charset="utf-8" src="<%
         $c->uri_for('/static/springboard/css-meta/bootstrap/js/bootstrap-dropdown.js')
         %>">
+    </script>    
     <script type="text/javascript" charset="utf-8" src="<%
         $c->uri_for('/static/springboard/css-meta/bootstrap/js/bootstrap-carousel.js')
         %>">
@@ -97,7 +98,7 @@
                 <div class="container">
                     <a class="brand" href="<%
                     $c->uri_for('/',undef,undef,$params) %>">
-                        gighome
+                        <img src="<% $c->uri_for('/static/images/logo_abbrev.png') %>" style="width:45px" />
                     </a>
                     <ul class="nav">
                         <li class="dropdown">
