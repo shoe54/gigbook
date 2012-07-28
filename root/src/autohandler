@@ -33,6 +33,7 @@
     <script type="text/javascript" charset="utf-8" src="<%
         $c->uri_for('/static/springboard/css-meta/bootstrap/js/bootstrap-dropdown.js')
         %>">
+    </script>    
     <script type="text/javascript" charset="utf-8" src="<%
         $c->uri_for('/static/springboard/css-meta/bootstrap/js/bootstrap-carousel.js')
         %>">
