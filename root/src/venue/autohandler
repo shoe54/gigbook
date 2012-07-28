@@ -1,8 +1,5 @@
 <div class="row">
-    <div class="span4">
-        
-    </div>
-    <div class="span8">
+    <div class="span8 offset2">
         <ul class="nav nav-pills">
             <li><a href="">Venue1</a></li>
             <li><a href="">Venue2</a></li>
