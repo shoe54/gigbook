@@ -1,25 +1,31 @@
 
-        <div class="row">
-            <div class="span8 offset2 pull-right">
-                <ul class="nav nav-tabs">
-                    <li><a href="">Venue1</a></li>
-                    <li><a href="">Venue2</a></li>
-                    <li><a href="">Venue3</a></li>
-                    <li><a href="">Venue4</a></li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle"
-                       data-toggle="dropdown"
-                       href="#">
-                        Dropdown
-                        <b class="caret"></b>
-                      </a>
-                    <ul class="dropdown-menu">
-                        <li>Genre</li>
-                        <li>Availability</li>
-                    </ul>
-                  </li>
-                </ul>
-            </div>
-        </div>
 
-<% $m->call_next %>
+<div class="container-fluid">
+    <div class="row-fluid">
+                <div class="span2">
+                    <ul class="nav nav-tabs nav-stacked">
+                        <li><a href="">Profile</a></li>
+                        <li><a href="">Connect</a></li>
+                        <li><a href="">Artist</a></li>
+                        <li><a href="">Blah</a></li>
+                        <a class="dropdown-toggle"
+                           data-toggle="dropdown"
+                           href="#">
+                            Genre
+                            <b class="caret"></b>
+                          </a>
+                        <ul class="dropdown-menu">
+                            <li>Alternative</li>
+                            <li>Punk</li>
+                            <li>Disco</li>
+                            <li>Schlager</li>
+                            <li>Not Suck</li>
+                        </ul>
+                      </li>
+                    </ul>
+                </div>
+        <div class="span8">
+            <% $m->call_next %>
+        </div>
+    </div>
+</div>

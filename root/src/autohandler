@@ -27,6 +27,9 @@
         $c->uri_for('/static/scripts/gigbook.js')
         %>"></script>
     <script type="text/javascript" charset="utf-8" src="<%
+        $c->uri_for('/static/springboard/css-meta/bootstrap/js/bootstrap-dropdown.js')
+        %>">
+    <script type="text/javascript" charset="utf-8" src="<%
         $c->uri_for('/static/springboard/css-meta/bootstrap/js/bootstrap-carousel.js')
         %>">
     </script>
@@ -80,14 +83,42 @@
                 <div class="container">
                     <a class="brand" href="<%
                     $c->uri_for('/',undef,undef,$c->req->params) %>">
-                        gigsandmore
+                        gighome
                     </a>
                     <ul class="nav">
-                    <li><a href="<% $c->uri_for('/gigbook') %>">gigbook</a></li>
-                    <li><a href="<% $c->uri_for('/gigfind') %>">gigfind</a></li>
+                        <li class="dropdown">
+                            <a href="#"
+                                class="dropdown-toggle"
+                                data-toggle="dropdown">
+                                gigbook
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">Name</a></li>
+                                <li><a href="">Genre</a></li>
+                                <li><a href="">Most Popular</a></li>
+                                <li><a href="">In your area</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" 
+                                class="dropdown-toggle" 
+                                data-toggle="dropdown">gigfind
+                                <b class="caret"></b>
+                                </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="">Name</a></li>
+                                <li><a href="">Size</a></li>
+                                <li><a href="">Availability</a></li>
+                                <li><a href="">In your area</a></li>
+                            </ul>
+                        </li>
                     <li><a href="<% $c->uri_for('/gigrate') %>">gigrate</a></li>
                     <li><a href="<% $c->uri_for('/giggrab') %>" id="giggrab">giggrab</a></li>
                     <li><a href="<% $c->uri_for('/download') %>">download music</a></li>
+                    <li><a href="<% $c->uri_for('/about') %>">about</a></li>
                     </ul>
                             <!--<li class="divider-vertical"></li>-->
                 </div>
