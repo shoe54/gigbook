@@ -63,10 +63,11 @@ Summary of auto
 
 sub auto :Private {
     my ($self, $c) = @_;
-    my $corporate = $c->req->params()->{corporate};
+    my $params = $c->req->params();
+    my ($corporate,$artist) = @{$params}{qw/corporate artist/};
     $c->log->debug("Got corporate parameter: ".$corporate) if $corporate;
 
-    $c->stash(c => $c, corporate => $corporate);
+    $c->stash(c => $c, artist => $artist, corporate => $corporate);
 }
 
 =head2 end
