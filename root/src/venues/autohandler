@@ -21,5 +21,8 @@
             </div>
         </div>
     
-
-<% $m->call_next %>
+<div class="container-fluid">
+    
+        <% $m->call_next %>
+    
+</div>
