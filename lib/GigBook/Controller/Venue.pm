@@ -35,7 +35,15 @@ Summarry of venues
 
 sub venues :Path('/venues') {
     my ($self, $c) = @_;
-    $c->res->redirect($c->uri_for('/venue'))
+    my $params = $c->req->params();
+    my ( $corporate, $artist ) = @{$params}{qw/corporate artist/};
+    my $get_string;
+    if ( %{$params} ) {
+        $get_string = '?';
+        $get_string .= 'corporate=' . $corporate if $corporate;
+        $get_string .= '&artist=' . $artist       if $artist;
+    }
+    $c->res->redirect($c->uri_for('/venue').$get_string);
 }
 
 =head2 auto

@@ -1,5 +1,6 @@
 <%args>
     $active => undef
+    $get_string => ''
 </%args>
 <!DOCTYPE HTML>
 <html>
@@ -55,7 +56,7 @@
 %                      my $state = '';
 %                      $state = 'class="active"' if $nav_item and $nav_item eq $active;
                         <li <%$state%>><a href="<%
-                            $c->uri_for('/'.$nav_item)
+                            $c->uri_for('/'.$nav_item, ).$get_string
                             %>"><% ucfirst $nav_item %></a></li>
 
 %                   }

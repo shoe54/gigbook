@@ -8,7 +8,7 @@ BEGIN { extends 'Catalyst::Controller' }
 # Sets the actions in this controller to be registered with no prefix
 # so they function identically to actions created in MyApp.pm
 #
-__PACKAGE__->config(namespace => '');
+__PACKAGE__->config( namespace => '' );
 
 =head1 NAME
 
@@ -26,7 +26,7 @@ The root page (/)
 
 =cut
 
-sub index :Path :Args(0) {
+sub index : Path : Args(0) {
     my ( $self, $c ) = @_;
 
     # Hello World
@@ -39,9 +39,9 @@ Standard 404 error page
 
 =cut
 
-sub default :Path {
+sub default : Path {
     my ( $self, $c ) = @_;
-    $c->response->body( 'Page not found' );
+    $c->response->body('Page not found');
     $c->response->status(404);
 }
 
@@ -51,8 +51,8 @@ Summary of info
 
 =cut
 
-sub info :Path {
-    my ($self, $c) = @_;
+sub info : Path {
+    my ( $self, $c ) = @_;
 }
 
 =head2 auto
@@ -61,13 +61,24 @@ Summary of auto
 
 =cut
 
-sub auto :Private {
-    my ($self, $c) = @_;
+sub auto : Private {
+    my ( $self, $c ) = @_;
     my $params = $c->req->params();
-    my ($corporate,$artist) = @{$params}{qw/corporate artist/};
-    $c->log->debug("Got corporate parameter: ".$corporate) if $corporate;
+    my ( $corporate, $artist ) = @{$params}{qw/corporate artist/};
+    my $get_string;
+    if ( %{$params} ) {
+        $get_string = '?';
+        $get_string .= 'corporate=' . $corporate if $corporate;
+        $get_string .= '&artist=' . $artist       if $artist;
+    }
+    $c->log->debug( "Got corporate parameter: " . $corporate ) if $corporate;
 
-    $c->stash(c => $c, artist => $artist, corporate => $corporate);
+    $c->stash(
+        c          => $c,
+        artist     => $artist,
+        corporate  => $corporate,
+        get_string => $get_string
+    );
 }
 
 =head2 end
@@ -76,7 +87,8 @@ Attempt to render a view, if needed.
 
 =cut
 
-sub end : ActionClass('RenderView') {}
+sub end : ActionClass('RenderView') {
+}
 
 =head1 AUTHOR
 

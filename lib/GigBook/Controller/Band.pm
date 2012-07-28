@@ -41,13 +41,21 @@ sub auto :Private {
 
 =head2 bands
 
-Summarry of bands
+Summary of bands
 
 =cut
 
 sub bands :Path('/bands') {
     my ($self, $c) = @_;
-    $c->res->redirect($c->uri_for('/band'));
+    my $params = $c->req->params();
+    my ( $corporate, $artist ) = @{$params}{qw/corporate artist/};
+    my $get_string;
+    if ( %{$params} ) {
+        $get_string = '?';
+        $get_string .= 'corporate=' . $corporate if $corporate;
+        $get_string .= '&artist=' . $artist       if $artist;
+    }
+    $c->res->redirect($c->uri_for('/band').$get_string);
 }
 
 
