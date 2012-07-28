@@ -58,6 +58,37 @@ Summary of bands
     #$c->res->redirect($c->uri_for('/band').$get_string);
 #}
 
+=head2 genre
+
+Summary of genre
+
+=cut
+
+sub genre :Path  {
+    my ($self, $c) = @_;
+}
+
+=head2 popular
+
+Summary of popular
+
+=cut
+
+sub popular : Path {
+    my ($self, $c) = @_;
+}
+
+
+=head2 yourarea
+
+Summary of yourarea
+
+=cut
+
+sub yourarea {
+    my ($self, $c) = @_;
+}
+
 
 =head1 AUTHOR
 
