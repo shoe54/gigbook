@@ -129,10 +129,9 @@
                                 <b class="caret"></b>
                                 </a>
                             <ul class="dropdown-menu">
-                                <li><a href="<% $c->uri_for('/gigfind')%>">Name</a></li>
-                                <li><a href="<%$c->uri_for('/gigfind')%>">Size</a></li>
-                                <li><a href="<% $c->uri_for('/venues/availability')%>">Availability</a></li>
-                                <li><a href="<% $c->uri_for('/venues/yourarea')%>">In your area</a></li>
+                                <li><a href="<% $c->uri_for('/gigfind')%>">Search calendar</a></li>
+                                <li><a href="<%$c->uri_for('/gigfind')%>">Search musicians/bands</a></li>
+                                <li><a href="<% $c->uri_for('/venues/yourarea')%>">Search venues</a></li>
                             </ul>
                         </li>
                     <li><a href="<% $c->uri_for('/gigrate') %>">gigrate</a></li>
