@@ -78,7 +78,8 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
-                    <a class="brand" href="<% $c->uri_for('/').$get_string %>">
+                    <a class="brand" href="<%
+                    $c->uri_for('/',undef,undef,$c->req->params) %>">
                         gigsandmore
                     </a>
                     <ul class="nav">
@@ -86,10 +87,8 @@
 %                      my $state = '';
 %                      $state = 'class="active"' if $nav_item and $nav_item eq $active;
                         <li <%$state%>><a href="<%
-                            $c->uri_for('/'.$nav_item, ).$get_string
-                            #$c->uri_for('/'.$nav_item, )
+                            $c->uri_for('/'.$nav_item,undef,undef,$c->req->params )
                             %>" id="<%$nav_item%>"><% ucfirst $nav_item %></a></li>
-
 %                   }
                     </ul>
                             <!--<li class="divider-vertical"></li>-->
