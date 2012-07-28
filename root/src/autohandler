@@ -4,6 +4,10 @@
     $corporate => undef
     $artist => undef
 </%args>
+<%init>
+    my $params = $c->req->params // {};
+    
+</%init>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -47,6 +51,16 @@
 
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
 	<div class="modal hide" id="myModal">
   		<div class="modal-header">
     		<button type="button" class="close" data-dismiss="modal">×</button>
@@ -82,7 +96,7 @@
             <div class="navbar-inner">
                 <div class="container">
                     <a class="brand" href="<%
-                    $c->uri_for('/',undef,undef,$c->req->params) %>">
+                    $c->uri_for('/',undef,undef,$params) %>">
                         <img src="<% $c->uri_for('/static/images/logo_abbrev.png') %>" style="width:45px" />
                     </a>
                     <ul class="nav">
@@ -95,9 +109,15 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="<%$c->uri_for('/gigbook')%>">Name</a></li>
-                                <li><a href="<%$c->uri_for('/bands/genre')%>">Genre</a></li>
-                                <li><a href="<%$c->uri_for('/bands/popular')%>">Most Popular</a></li>
-                                <li><a href="<% $c->uri_for('/bands/yourarea')%>">In your area</a></li>
+                                <li><a href="<%
+                                    $c->uri_for('/bands/genre')
+                                  %>">Genre</a></li>
+                                <li><a href="<%
+                                    $c->uri_for('/bands/popular')
+                                %>">Most Popular</a></li>
+                                <li><a href="<% 
+                                    $c->uri_for('/bands/yourarea')
+                                %>">In your area</a></li>
                             </ul>
                         </li>
 
@@ -124,10 +144,17 @@
             </div>
         </div>
 
-        <% $m->call_next %>
+        <div class="span12"><% $m->call_next %> </div>
+        <hr>
+      <footer>
        <div class="row">
-       <div class="span4 offset4"><p>gigsandmore.com-v<% $c->VERSION %></div>
-       </p></div>
+       <div class="span6"><p>gigsandmore.com-v<% $c->VERSION %></div>
+       <div class="span6">
+       <div class="fb-like" data-href="http://www.gigsandmore.com"
+       data-send="true" data-width="450" data-show-faces="true"></div>
+
+       </div>
+      </footer>
     </div>
 </body>
 </html>

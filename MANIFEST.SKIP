@@ -70,3 +70,22 @@
 GigBook.*gz
 .*gitmodules
 Changes
+
+# build stuff from submodules
+.*bootstrap\/js\/test.*
+.*bootstrap\/doc.*
+.*bootstrap\/build.*
+.*backbone\/test.*
+.*backbone\/doc.*
+.*backbone\/build.*
+.*jquery\/test.*
+.*jquery\/doc.*
+.*jquery\/build.*
+.*less.js\/test.*
+.*less.js\/doc.*
+.*less.js\/build.*
+.*underscore\/test.*
+.*underscore\/doc.*
+.*socket\.io\/test.*
+.*socket\.io\/doc.*
+.*socket\.io\/support.*
