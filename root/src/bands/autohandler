@@ -8,9 +8,10 @@
                         <li><a href="">Connect</a></li>
                         <li><a href="">Artist</a></li>
                         <li><a href="">Blah</a></li>
-                        <a class="dropdown-toggle"
-                           data-toggle="dropdown"
-                           href="#">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle"
+                            data-toggle="dropdown"
+                            href="#">
                             Genre
                             <b class="caret"></b>
                           </a>

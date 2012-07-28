@@ -4,6 +4,10 @@
     $corporate => undef
     $artist => undef
 </%args>
+<%init>
+    my $params = $c->req->params // {};
+    
+</%init>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -82,7 +86,7 @@
             <div class="navbar-inner">
                 <div class="container">
                     <a class="brand" href="<%
-                    $c->uri_for('/',undef,undef,$c->req->params) %>">
+                    $c->uri_for('/',undef,undef,$params) %>">
                         gighome
                     </a>
                     <ul class="nav">
@@ -95,9 +99,15 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="<%$c->uri_for('/gigbook')%>">Name</a></li>
-                                <li><a href="<%$c->uri_for('/bands/genre')%>">Genre</a></li>
-                                <li><a href="<%$c->uri_for('/bands/popular')%>">Most Popular</a></li>
-                                <li><a href="<% $c->uri_for('/bands/yourarea')%>">In your area</a></li>
+                                <li><a href="<%
+                                    $c->uri_for('/bands/genre')
+                                  %>">Genre</a></li>
+                                <li><a href="<%
+                                    $c->uri_for('/bands/popular')
+                                %>">Most Popular</a></li>
+                                <li><a href="<% 
+                                    $c->uri_for('/bands/yourarea')
+                                %>">In your area</a></li>
                             </ul>
                         </li>
 
