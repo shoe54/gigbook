@@ -67,4 +67,6 @@
 
 # Avoid archives of this distribution
 .*.swp
-Travissoto.*gz
+GigBook.*gz
+.*gitmodules
+Changes
