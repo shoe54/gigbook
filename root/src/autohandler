@@ -17,6 +17,8 @@
 	<script src="<%
     $c->uri_for('/static/springboard/js-meta/less.js/dist/less-1.3.0.min.js')
     %>" ></script>
+    <script type="text/javascript" charset="utf-8" src="<% $c->uri_for('/static/springboard/css-meta/bootstrap/js/bootstrap-transition.js') %>">
+    </script>
     <script type="text/javascript" charset="utf-8" src="<%
         $c->uri_for('/static/springboard/css-meta/bootstrap/js/bootstrap-modal.js')
         %>">
@@ -26,6 +28,14 @@
         %>"></script>
     <script type="text/javascript" charset="utf-8" src="<%
         $c->uri_for('/static/springboard/css-meta/bootstrap/js/bootstrap-carousel.js')
+        %>">
+    </script>
+    <script type="text/javascript" charset="utf-8" src="<%
+        $c->uri_for('/static/springboard/css-meta/bootstrap/js/bootstrap-tooltip.js')
+        %>">
+    </script>
+    <script type="text/javascript" charset="utf-8" src="<%
+        $c->uri_for('/static/springboard/css-meta/bootstrap/js/bootstrap-popover.js')
         %>">
     </script>
     <script type="text/javascript" src="<% $c->uri_for('/static/scripts/band.js') %>"></script>
@@ -70,7 +80,9 @@
                             %>"><% ucfirst $nav_item %></a></li>
 
 %                   }
-                            <li class="divider-vertical"></li>
+                    </ul>
+                            <!--<li class="divider-vertical"></li>-->
+                    <ul class="nav" style="float:right">
 %                   if ($corporate != 1 && $artist != 1) {
                         <li><a href="<% $c->uri_for('/signup') %>">Sign Up</a></li>
                         <li><a href="" id="login">Login</a></li>
