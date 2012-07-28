@@ -25,7 +25,7 @@ use Catalyst qw/
 extends 'Catalyst';
 
 ## no critic
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 eval $VERSION;
 ## use critic
 
@@ -46,7 +46,7 @@ __PACKAGE__->config(
     enable_catalyst_header                      => 1,   # Send X-Catalyst header
 );
 
-__PACKAGE__->config( static => { dirs => [ 'static', ], } );
+__PACKAGE__->config( 'Plugin::Static::Simple' => { dirs => [ 'static', ], } );
 
 # Start the application
 __PACKAGE__->setup();

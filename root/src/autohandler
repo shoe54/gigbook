@@ -9,10 +9,10 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script type="text/javascript" src="<%
-        $c->uri_for('/static/scripts/jquery.min.js')
+        $c->uri_for('/scripts/jquery.min.js')
         %>"></script>
     <link rel="stylesheet/less" href="<%
-        $c->uri_for('/static/css/bootstrap.css')
+        $c->uri_for('css/bootstrap.css')
         %>" />
 	<script src="<%
     $c->uri_for('/static/springboard/js-meta/less.js/dist/less-1.3.0.min.js')
