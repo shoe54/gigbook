@@ -10,7 +10,8 @@
         %>" />
 	<script src="<%    $c->uri_for('/static/springboard/js-meta/less.js/dist/less-1.3.0.min.js')  %>" ></script>
     <script type="text/javascript" charset="utf-8" src="<%
-        $c->uri_for('/static/springboard/css-meta/bootstrap/js/bootstrap-modal.js') %>"> 
+        $c->uri_for('/static/springboard/css-meta/bootstrap/js/bootstrap-modal.js') 
+        %>"> 
     </script>
     <script type="text/javascript" src="<%
         $c->uri_for('/static/scripts/jquery.min.js')
