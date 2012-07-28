@@ -52,8 +52,19 @@
     	<form action="<% $c->uri_for('/') %>">
   		<div class="modal-body">
     		<p>
-	    		Username: <input type="text" name="username"><br />
-    			Password: <input type="password">
+    			<table style="background-color:transparent">
+	    			<tr>
+    					<td>Username:</td>
+    					<td><input type="text" name="username"></td>
+    				</tr>
+    				<tr>
+    					<td>Password:</td>
+    					<td><input type="password"></td>
+    				</tr>
+    				<tr>
+    					<td colspan="2"><a href="">Signup</a></td>
+    				</tr>
+    			</table>
     		</p>
   		</div>
   		<div class="modal-footer">
@@ -72,22 +83,15 @@
                         gigsandmore
                     </a>
                     <ul class="nav">
-%                   foreach my $nav_item (qw/bands venues public/) {
+%                   foreach my $nav_item (qw/gigbook gigfind gigrate giggrab downloadmusic/) {
 %                      my $state = '';
 %                      $state = 'class="active"' if $nav_item and $nav_item eq $active;
                         <li <%$state%>><a href="<%
                             $c->uri_for('/'.$nav_item,undef,undef,$c->req->params )
-                            %>"><% ucfirst $nav_item %></a></li>
-
+                            %>" id="<%$nav_item%>"><% ucfirst $nav_item %></a></li>
 %                   }
                     </ul>
                             <!--<li class="divider-vertical"></li>-->
-                    <ul class="nav" style="float:right">
-%                   if ($corporate != 1 && $artist != 1) {
-                        <li><a href="<% $c->uri_for('/signup') %>">Sign Up</a></li>
-                        <li><a href="" id="login">Login</a></li>
-%                   }
-                    </ul>
                 </div>
             </div>
         </div>
