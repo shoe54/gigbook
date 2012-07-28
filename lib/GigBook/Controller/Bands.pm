@@ -37,6 +37,22 @@ sub auto : Private {
     $c->stash( active => 'band' );
 }
 
+
+=head2 profile
+
+Summary of profile
+
+=cut
+
+sub profile : Local :Args(1) {
+    my ($self, $c, $bandname) = @_;
+    my @names = split/_/,$bandname;
+    $_ = ucfirst $_  foreach @names;
+    my $ficticious_band = join " " => @names;
+
+    $c->stash(bandname => $ficticious_band);
+}
+
 =head2 bands
 
 Summary of bands
