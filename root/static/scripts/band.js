@@ -14,4 +14,7 @@
      $('#fotc').popover({
     	    content: $('#fotcpop').html()
 	 });
+     $('#rb').popover({
+ 	    content: $('#rbpop').html()
+	 });
  });
