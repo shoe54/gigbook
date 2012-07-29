@@ -105,7 +105,7 @@
                             <a href="#"
                                 class="dropdown-toggle"
                                 data-toggle="dropdown">
-                                gigbook
+                                GIG<span style="color:#666666">BOOK</span>
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
@@ -125,7 +125,7 @@
                         <li class="dropdown">
                             <a href="#"
                                 class="dropdown-toggle"
-                                data-toggle="dropdown">gigguide
+                                data-toggle="dropdown">GIG<span style="color:#666666">GUIDE</span>
                                 <b class="caret"></b>
                                 </a>
                             <ul class="dropdown-menu">
@@ -134,10 +134,10 @@
                                 <li><a href="<% $c->uri_for('/venues/yourarea')%>">Search venues</a></li>
                             </ul>
                         </li>
-                    <li><a href="<% $c->uri_for('/gigrate') %>">gigrate</a></li>
-                    <li><a href="<% $c->uri_for('/giggrab') %>" id="giggrab">giggrab</a></li>
-                    <li><a href="<% $c->uri_for('/download') %>">download music</a></li>
-                    <li><a href="<% $c->uri_for('/about') %>">about</a></li>
+                    <li><a href="<% $c->uri_for('/gigrate') %>">GIG<span style="color:#666666">RATE</span></a></li>
+                    <li><a href="<% $c->uri_for('/giggrab') %>" id="giggrab">GIG<span style="color:#666666">GRAB</span></a></li>
+                    <li><a href="<% $c->uri_for('/download') %>">DOWNLOAD MUSIC</a></li>
+                    <li><a href="<% $c->uri_for('/about') %>">ABOUT</a></li>
                     </ul>
                             <!--<li class="divider-vertical"></li>-->
                 </div>

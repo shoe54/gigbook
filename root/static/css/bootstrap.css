@@ -364,7 +364,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Museo', sans-serif;
   font-weight: bold;
   color: #3333EE;
   text-rendering: optimizelegibility;
@@ -4262,16 +4262,32 @@ blockquote.pull-right {
   padding: 27px 20px 13px;
   line-height: 30px;
   font-family: 'Museo', sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  text-shadow: -2px 2px 0 #BBBBBB;
+}
+.navbar .navbar-text {
+  padding: 27px 20px 13px;
+  line-height: 30px;
+  font-family: 'Museo', sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+text-shadow: -2px 2px 0 #555555;
+}
+/*.navbar .nav > li > a {
+  padding: 27px 20px 13px;
+  line-height: 30px;
+  font-family: 'Oswald', sans-serif;
   font-size: 22px;
   text-shadow: -2px 2px 0 #aaaaaa;
 }
 .navbar .navbar-text {
   padding: 27px 20px 13px;
   line-height: 30px;
-  font-family: 'Museo', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 22px;
   text-shadow: -2px 2px 0 #555555;
-}
+}*/
 .navbar .nav > li.active > a {
   color: #3333EE;
 }
